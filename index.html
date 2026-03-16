@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Would Lior Say? 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-badge">🎂 Happy Birthday Lior!</div>
+    <h1>What Would<br><span>Lior</span> Say?</h1>
+    <p>Flip the card to reveal the question</p>
+    <div class="hearts">💕 💖 💗 💓 💕</div>
+  </header>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-label">
+      <span id="progressText">Card 1 of 12</span>
+      <span id="flippedCount">0 revealed</span>
+    </div>
+  </div>
+
+  <div class="card-area">
+    <div class="card-stack">
+      <div class="flip-card" id="flipCard" onclick="flipCard()">
+        <div class="flip-inner">
+          <div class="card-face card-front">
+            <div class="avatar-wrap">
+              <img id="cardImg" src="" alt="Lior avatar" />
+            </div>
+            <div class="tap-hint">👆 Tap to flip</div>
+          </div>
+          <div class="card-face card-back">
+            <div class="question-icon">💬</div>
+            <div class="question-label">The Question</div>
+            <div class="question-text" id="questionText"></div>
+            <div class="card-number" id="cardNumber"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-area">
+    <button class="nav-btn" id="prevBtn" onclick="navigate(-1)">←</button>
+    <div class="card-counter">
+      <span id="counterNum">1</span> / <span id="totalNum">12</span>
+      <small>Cards</small>
+    </div>
+    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">→</button>
+  </div>
+
+  <div class="dots" id="dotsContainer"></div>
+  <button class="shuffle-btn" onclick="shuffle()">✨ Shuffle Cards</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
